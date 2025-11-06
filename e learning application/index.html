@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Learning Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">EduLearn</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#progress">Progress</a></li>
+        <li><a href="#video">Videos</a></li>
+      </ul>
+      <button id="modeToggle">🌙</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to EduLearn</h1>
+    <p>Upgrade your skills with our interactive courses.</p>
+    <button class="btn">Get Started</button>
+  </section>
+
+  <section id="courses" class="courses">
+    <h2>Popular Courses</h2>
+    <div class="course-grid">
+      <div class="course-card" onclick="showDetails('Web Development')">
+        <img src="https://via.placeholder.com/250x150" alt="Web Dev">
+        <h3>Web Development</h3>
+        <p>HTML, CSS, JS, and more!</p>
+      </div>
+      <div class="course-card" onclick="showDetails('Python Basics')">
+        <img src="https://via.placeholder.com/250x150" alt="Python">
+        <h3>Python Basics</h3>
+        <p>Learn Python step by step.</p>
+      </div>
+      <div class="course-card" onclick="showDetails('UI/UX Design')">
+        <img src="https://via.placeholder.com/250x150" alt="Design">
+        <h3>UI/UX Design</h3>
+        <p>Create stunning user interfaces.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="progress" class="progress-section">
+    <h2>Your Learning Progress</h2>
+    <div class="progress-bar">
+      <div class="progress" id="progressFill"></div>
+    </div>
+    <button onclick="increaseProgress()">Increase Progress</button>
+  </section>
+
+  <section id="video" class="video-section">
+    <h2>Featured Video Lesson</h2>
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/dD2EISBDjWM" 
+        title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 EduLearn | All Rights Reserved</p>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="courseModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p>Welcome to this amazing course! Here you’ll learn everything step by step with practical examples.</p>
+      <button class="btn">Enroll Now</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
